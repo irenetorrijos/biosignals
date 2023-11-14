@@ -13515,7 +13515,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Observations:">Observations:<a class="anchor-link" href="#Observations:">&#182;</a></h2><p>Both filters start at almos 0 (0.5 Hz) and start droping around 40 Hz, the cutoff frequencies that were given. However, and according to theory, it can be seen that the higher order filter, has a steeper slope, which makes it a steeper filter, making it a more accurate bandpass filter.</p>
+<h2 id="Observations:">Observations:<a class="anchor-link" href="#Observations:">&#182;</a></h2><p>Both filters start at almos 0 (0.5 Hz) and start droping around 40 Hz, the cutoff frequencies that were given. Both filters look estable, which is crucial for a good filtering.</p>
+<p>It can be seen that the filters are generally the same, they start at 0.5 and let through up to about 40 Hz, and then turn to 0, which means that no frequencies pass through. However, depending on the order of the filter, the end of the filter is steeper or not. We can see that the higher the filter order the steeper the step, which allows more frequencies near 40 Hz to pass through and frequencies after 40 Hz to be cut off earlier. The ideal filter is the one that has the shape of a perfect rectangle since it cuts the frequencies exactly where we want them. However, as it is almost impossible to achieve it, we want to get one as close as possible, which in this case is the one of order 4.</p>
 
 </div>
 </div>
@@ -13582,8 +13583,8 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Observations:">Observations:<a class="anchor-link" href="#Observations:">&#182;</a></h2><p>There are 2 main changes in the filtered signal compared with the raw signal:</p>
 <ul>
-<li><strong>Less noise</strong>, the signal is clearer with less peaks that come from noise and artifacts. The QRS complex, P and T waves are preserved.</li>
-<li><strong>Centered at 0 Hz</strong>, one response for the bandpass filter. This means that the frequencies capable of passing this filter are then centered at 0 Hz, to simplify the interpretation. The now 0 was the baseline amplitude.</li>
+<li><strong>Less noise</strong>, the signal is clearer with less peaks that come from noise and artifacts. But, eventhough the signal went under filtering, it can be seen that the QRS complex, P and T waves are preserved.</li>
+<li><strong>Centered at 0 Hz</strong>, one response for the bandpass filter. This means that the frequencies capable of passing this filter are then centered at 0 Hz, to simplify the interpretation. This is done by swifting the baseline amplitude to 0.</li>
 </ul>
 
 </div>
@@ -13647,8 +13648,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Observations:">Observations:<a class="anchor-link" href="#Observations:">&#182;</a></h2><p>The filter is clearly observable here, the filtered signal only shows frequencies up to 40 Hz and the high amplitude frequencies lower than 0.5 Hz are deleted.</p>
-<p>These first frequencies that are smaller than 0.5 Hz are considered noise, so deleting them is essential for a good analysis of the signal.</p>
+<h2 id="Observations:">Observations:<a class="anchor-link" href="#Observations:">&#182;</a></h2><p>The filter is clearly observable here, the filtered signal only shows frequencies up to 40 Hz and the high amplitude frequencies lower than 0.5 Hz are deleted. So. the filter worked as expected. Also, there are not visible changes on the signal, which is essential when filtering.</p>
+<p>These first frequencies that are smaller than 0.5 Hz are considered noise, so deleting them is necessary for a good analysis of the signal.</p>
 
 </div>
 </div>
@@ -13771,7 +13772,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Observations:">Observations:<a class="anchor-link" href="#Observations:">&#182;</a></h2><p>When zooming in in the signal, the QRS detection by the Hamilton method seems to work. The tall peaks were marked as the peaks of the QRS complex, which seems correct.</p>
+<h2 id="Observations:">Observations:<a class="anchor-link" href="#Observations:">&#182;</a></h2><p>When zooming in in the signal, the QRS detection by the Hamilton method seems to work. The crosses indicating the peaks of the qrs complex coincide with the peaks of the ECG signal. This tells us that the method used (Hamilton) has worked correctly, as far as the naked eye can see. In addition, it can be seen how they follow a rhythm, which is what the heart does.</p>
 
 </div>
 </div>
